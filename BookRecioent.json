@@ -1,0 +1,94 @@
+{
+  "uuid": "9e93d79d-5c24-4d95-9417-7e97faf2e67a",
+  "lastMigration": 33,
+  "name": "BookRecioent",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3003,
+  "hostname": "0.0.0.0",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "66cf2ac5-b361-466f-8c04-cd3b2b2aa7ca",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "recipes",
+      "responses": [
+        {
+          "uuid": "c8d71ea3-d059-43f7-a339-ac6d7b472ca7",
+          "body": "{\r\n  \"recipes\": [\r\n    {\r\n      \"name\": \"Pizza Margarita\",\r\n      \"author\": \"Chef Marco Rossi\",\r\n      \"image_link\": \"https://pixabay.com/get/generic-pizza-image.jpg\",\r\n      \"recipe\": [\r\n        \"Prepara masa con harina, agua, levadura y sal.\",\r\n        \"Unta salsa de tomate.\",\r\n        \"Coloca mozzarella fresca y hojas de albahaca.\",\r\n        \"Hornea a 220 °C por 10–12 min.\",\r\n        \"Sirve con un chorrito de aceite de oliva.\"\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"Pizza Pepperoni\",\r\n      \"author\": \"Chef Giulia Bianchi\",\r\n      \"image_link\": \"https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg\",\r\n      \"recipe\": [\r\n        \"Extiende la masa preparada.\",\r\n        \"Agrega salsa de tomate y mozzarella.\",\r\n        \"Añade pepperoni en rodajas.\",\r\n        \"Hornea a 220 °C hasta que el queso se derrita y el pepperoni esté crujiente.\",\r\n        \"Sirve caliente.\"\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"Pizza Cuatro Quesos\",\r\n      \"author\": \"Chef Antonio Ricci\",\r\n      \"image_link\": \"https://images.unsplash.com/photo-1601924638855-3161b83a46f6\",\r\n      \"recipe\": [\r\n        \"Unta con salsa blanca ligera.\",\r\n        \"Agrega mozzarella, gorgonzola, parmesano y provolone.\",\r\n        \"Hornea a 220 °C hasta fundirse.\",\r\n        \"Decora con perejil fresco.\",\r\n        \"Sirve inmediatamente.\"\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"Pizza Hawaiana\",\r\n      \"author\": \"Chef Sofía Torres\",\r\n      \"image_link\": \"https://images.unsplash.com/photo-1594007652082-8c70d2a22f8d\",\r\n      \"recipe\": [\r\n        \"Cubre masa con salsa de tomate.\",\r\n        \"Agrega mozzarella, jamón y trozos de piña.\",\r\n        \"Hornea a 220 °C.\",\r\n        \"Sirve con orégano espolvoreado.\"\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"Calzone Napolitano\",\r\n      \"author\": \"Chef Luigi Romano\",\r\n      \"image_link\": \"https://isorepublic.com/wp-content/uploads/2018/11/pizza-making-1100x733.jpg\",\r\n      \"recipe\": [\r\n        \"Extiende masa circular.\",\r\n        \"Rellena con salsa de tomate, mozzarella, jamón y champiñones.\",\r\n        \"Dobla y sella los bordes.\",\r\n        \"Hornea a 200 °C por 20 minutos.\",\r\n        \"Sirve caliente con salsa aparte.\"\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"Pizza Vegetariana\",\r\n      \"author\": \"Chef Elena Fernández\",\r\n      \"image_link\": \"https://pixabay.com/get/generic-pizza-image.jpg\",\r\n      \"recipe\": [\r\n        \"Unta la masa con salsa de tomate.\",\r\n        \"Agrega mozzarella, pimientos, champiñones, cebolla y aceitunas.\",\r\n        \"Hornea a 220 °C hasta que el queso se derrita.\",\r\n        \"Sirve caliente con hojas de rúcula fresca encima.\"\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"Pizza BBQ Pollo\",\r\n      \"author\": \"Chef Carlos Méndez\",\r\n      \"image_link\": \"https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg\",\r\n      \"recipe\": [\r\n        \"Unta la masa con salsa BBQ.\",\r\n        \"Agrega mozzarella, pollo cocido desmenuzado y cebolla morada.\",\r\n        \"Hornea a 220 °C hasta dorar.\",\r\n        \"Sirve con cilantro fresco.\"\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"Pizza Suprema\",\r\n      \"author\": \"Chef Valentina Russo\",\r\n      \"image_link\": \"https://images.unsplash.com/photo-1601924638855-3161b83a46f6\",\r\n      \"recipe\": [\r\n        \"Extiende masa con salsa de tomate.\",\r\n        \"Agrega mozzarella, pepperoni, salami, pimientos, champiñones, cebolla y aceitunas.\",\r\n        \"Hornea a 220 °C hasta que esté burbujeante.\",\r\n        \"Sirve caliente y disfruta.\"\r\n      ]\r\n    }\r\n  ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "66cf2ac5-b361-466f-8c04-cd3b2b2aa7ca"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
