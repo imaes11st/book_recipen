@@ -9,6 +9,26 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: <Widget>[_RecipesCard(context), _RecipesCard(context)],
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.orange,
+        child: Icon(Icons.add, color: Colors.white),
+        onPressed: () {
+          _showBottom(context);
+        },
+      ),
+    );
+  }
+
+  Future<void> _showBottom(BuildContext context) {
+    return showModalBottomSheet(
+      isScrollControlled: true,
+      context: context,
+      builder: (contexto) => Container(
+        width: MediaQuery.of(context).size.width,
+        height: 600,
+        color: Colors.white,
+        child: RecipeForm(),
+      ),
     );
   }
 
@@ -24,9 +44,12 @@ class HomeScreen extends StatelessWidget {
               Container(
                 height: 125,
                 width: 100,
-                decoration: BoxDecoration(
+                child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
-                  color: Colors.orange,
+                  child: Image.network(
+                    'https://www.simplyrecipes.com/thmb/X2B0QCVdGJWGO1gW6GR7cz1rhe0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               SizedBox(width: 26),
@@ -35,13 +58,13 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'Lasagna',
+                    'Pizza Peperoni',
                     style: TextStyle(fontSize: 16, fontFamily: 'Quicksand'),
                   ),
                   SizedBox(height: 4),
                   Container(height: 2, width: 75, color: Colors.orange),
                   Text(
-                    'Alison J',
+                    'Juan M',
                     style: TextStyle(fontSize: 16, fontFamily: 'Quicksand'),
                   ),
                   SizedBox(height: 4),
@@ -49,6 +72,52 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class RecipeForm extends StatelessWidget {
+  const RecipeForm({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(12),
+      child: Form(
+        //key: _formKey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Add New Recipe',
+              style: TextStyle(color: Colors.orange, fontSize: 24),
+            ),
+            SizedBox(height: 16),
+            _buildTextField(label: 'Recipe Name'),
+            SizedBox(height: 16),
+            _buildTextField(label: 'Author'),
+            SizedBox(height: 16),
+            _buildTextField(label: 'Image Url'),
+            SizedBox(height: 16),
+            _buildTextField(label: 'Recipe'),
+            SizedBox(height: 16),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTextField({required String label}) {
+    return TextFormField(
+      decoration: InputDecoration(
+        labelText: label,
+        labelStyle: TextStyle(fontFamily: 'Quicksand', color: Colors.orange),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.orange, width: 1),
+          borderRadius: BorderRadius.circular(10),
         ),
       ),
     );
