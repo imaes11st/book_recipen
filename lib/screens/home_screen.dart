@@ -1,10 +1,7 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:book_recipent/providers/recipes_provider.dart';
 import 'package:book_recipent/screens/recipe_detail.dart';
-import 'package:http/http.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -63,7 +60,7 @@ class HomeScreen extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => RecipeDetail(recipeName: recipe.name),
+            builder: (context) => RecipeDetail(recipesData: recipe),
           ),
         );
       },
