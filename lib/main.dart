@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:book_recipent/providers/recipes_provider.dart';
-import 'package:book_recipent/screens/home_screen.dart';
 import 'package:book_recipent/screens/favorites_recipes.dart';
+import 'package:book_recipent/screens/home_screen.dart';
 
 void main() => runApp(const MyApp());
 
